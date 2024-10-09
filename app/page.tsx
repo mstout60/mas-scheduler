@@ -74,7 +74,7 @@ export default function Home() {
               src="/poster.png"
               alt="Scheduling illustration"
               fill
-              objectFit="contain"
+              style={{ objectFit: "contain" }}
             />
           </div>
         </div>

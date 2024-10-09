@@ -4,8 +4,11 @@ import { Button } from "@/components/ui/button";
 import { PenBox } from 'lucide-react';
 import { SignedOut, SignedIn, SignInButton } from "@clerk/nextjs";
 import UserMenu from "@/components/user-menu";
+import { checkUser } from "@/lib/check-user";
 
-const Header = () => {
+const Header = async () => {
+    await checkUser();
+
     return (
         <nav className="mx-auto py-2 px-4 flex justify-between items-center shadow-md border-b-2">
             <Link
@@ -37,7 +40,7 @@ const Header = () => {
                     </SignInButton>
                 </SignedOut>
                 <SignedIn>
-                   <UserMenu />
+                    <UserMenu />
                 </SignedIn>
             </div>
         </nav>
