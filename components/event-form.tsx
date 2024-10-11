@@ -31,17 +31,9 @@ import {
 } from "@/components/ui/form";
 import { useRouter } from 'next/navigation';
 
-
 type Props = {
   onSubmitForm: () => void;
 };
-
-// type EventData = {
-//     title: string;
-//     description: string;
-//     duration: number;
-//     isPrivate: boolean;
-// }
 
 type EventFormValues = z.infer<typeof eventSchema>;
 
@@ -57,7 +49,6 @@ function EventForm({ onSubmitForm }: Props) {
   });
 
   const { isLoading, hasError, fn: fnCreateEvent } = useFetch(createEvent)
-  //const { isSubmitting, isValid } = form.formState;
 
   const onSubmit = async (eventData: EventFormValues) => {
 
@@ -124,6 +115,7 @@ function EventForm({ onSubmitForm }: Props) {
               </FormLabel>
               <FormControl>
                 <Input
+                  type="number"
                   disabled={isLoading}
                   {...field}
                 />
