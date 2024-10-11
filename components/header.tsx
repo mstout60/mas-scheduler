@@ -25,7 +25,7 @@ const Header = async () => {
             </Link>
             <div className="flex items-center gap-4">
                 <Link
-                    href='/events>create=true'
+                    href='/events?create=true'
                 >
                     <Button className="flex items-center gap-2">
                         <PenBox size={18} />

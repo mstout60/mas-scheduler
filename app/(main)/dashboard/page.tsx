@@ -32,8 +32,6 @@ const DashboardPage = () => {
 
     const origin = typeof window !== "undefined" ? window.location.origin : "";
 
-
-
     const onSubmit = async (data: { username: string }) => {
         fnUpdateUsername(data.username);
     };
