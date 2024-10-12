@@ -52,7 +52,6 @@ function EventForm({ onSubmitForm }: Props) {
 
   const onSubmit = async (eventData: EventFormValues) => {
 
-    //await createEvent(eventData)
     await fnCreateEvent(eventData);
 
     if (!isLoading && !hasError) {
